@@ -1,0 +1,6 @@
+torch>=2.3
+timm
+safetensors
+numpy<2
+scikit-learn
+tqdm

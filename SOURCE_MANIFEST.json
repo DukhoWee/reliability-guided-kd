@@ -1,0 +1,55 @@
+{
+  "source_head": "778311c935f499ad2075dddc7fa20f30f59c0f20",
+  "source_main_tracked": false,
+  "note": "최종 학습 파일은 원본 작업 트리에서 미추적 상태였다. Git author만으로 실제 작성자나 단독 기여를 단정하지 않는다.",
+  "files": [
+    {
+      "source": "scripts/train_noisy_student_kd.py",
+      "target": "scripts/kd_data.py",
+      "source_sha256": "3bcecf4f8605fd913e2e27979841b9a1774f14923d9d3c857e588edd07c1bae4",
+      "functions_and_classes": [
+        "Cifar100CCdfCalibrationDataset",
+        "Cifar100CPairedTrainDataset",
+        "_can_stratify_split",
+        "args_to_jsonable_dict",
+        "create_cdf_train_val_test_image_id_split",
+        "load_checkpoint_state_dict",
+        "split_fixed_image_ids",
+        "summarize_rows",
+        "write_csv"
+      ],
+      "change": "필요한 최상위 정의와 전이 의존성만 원문 그대로 추출; 원본 import 유지"
+    },
+    {
+      "source": "scripts/train_multi_teacher_gated_kd.py",
+      "target": "scripts/train.py",
+      "source_sha256": "08955ebac137be1fdf391cc5a3b71eba7731bbe46e8219a699250fbfbb7d58fd",
+      "change": "파일명 변경 및 공통 모듈 import 경로만 kd_data로 변경; 나머지 원문 동일"
+    },
+    {
+      "source": "scripts/mcdo_utils.py",
+      "target": "scripts/mcdo_utils.py",
+      "source_sha256": "11891cd64b3b083f623b84eb3f1a59fcf07291ad9bff2ee744ec05ab4adac3f5",
+      "functions_and_classes": [
+        "Cifar100CIndexedDataset",
+        "NormalizeNumpyImage",
+        "NumpyImageDataset",
+        "_strip_common_prefixes",
+        "build_cifar_resnet18",
+        "build_cifar_resnet50",
+        "classification_metrics_from_probs",
+        "compute_ece",
+        "entropy_from_logits",
+        "load_cifar100_clean_arrays",
+        "load_cifar100c_labels",
+        "load_model_config",
+        "load_teacher_state_dict",
+        "make_normalize_transform",
+        "predict_probs",
+        "resolve_device",
+        "seed_everything"
+      ],
+      "change": "필요한 최상위 정의와 전이 의존성만 원문 그대로 추출; 원본 import 유지"
+    }
+  ]
+}

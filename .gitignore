@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+.venv/
+.env
+.env.*
+models/
+checkpoints/
+data/
+CIFAR-100-C/
+*.tar
+*.tar.gz
+*.zip
+*.pt
+*.pth
+*.bin
+*.safetensors
+*.log
